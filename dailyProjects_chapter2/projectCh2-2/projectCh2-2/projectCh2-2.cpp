@@ -13,7 +13,7 @@ int main()
 	int tries = 0;
 	int guess;
 
-	cout << "\tWelcome to Guess My Number, in this version, you only have 5 tires!\n\n";
+	cout << "\tWelcome to Guess My Number, in this version, you only have 5 tries!\n\n";
 
 	do
 	{
