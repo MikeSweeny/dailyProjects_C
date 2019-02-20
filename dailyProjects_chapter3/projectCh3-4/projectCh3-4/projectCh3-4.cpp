@@ -7,25 +7,27 @@ using namespace std;
 
 int main()
 {
+	cout << "Oh look a dumb score chart!\n\n";
+	const int scores = 5;
+	const int players = 5;
+	string name;
+
+	int inputScore;
+
+	int score;
+	int scoring[players];
+	string pName[5] = { "" };
+	string SCORE[players][scores]
+	{
+		{"Sweeny\t", "5000"},
+		{"Sweeny\t", "4000"},
+		{"Sweeny\t", "3000"},
+		{"Sweeny\t", "2000"},
+		{"Sweeny\t", "1000"}
+
+	};
 	while (true)
 	{
-		// Setting up the board
-		cout << "Oh look a dumb score chart!\n";
-		const int scores = 5;
-		const int players = 5;
-		string name;
-		string pName[5]  = { "" };
-		string pScore[5] = { "" };
-		string SCORE[players][scores]
-		{
-			{"Sweeny\t", "1000"},
-			{"Sweeny\t", "1000"},
-			{"Sweeny\t", "1000"},
-			{"Sweeny\t", "1000"},
-			{"Sweeny\t", "1000"}
-
-		};
-
 		for (int i = 0; i < players; i++)
 		{
 			for (int j = 0; j < scores; j++)
@@ -33,55 +35,46 @@ int main()
 				cout << SCORE[i][j];
 			}
 			cout << "\n";
-		}
-
-		// Select your number
-		cout << "What is your player number? (1-5 only)\n\n";
-		cout << "Number: ";
-		int input;
-		cin >> input;
-		int choice = (input - 1);
-
-		
+		}		
 		// Set your name and score
 		cout << "\nWhat is your player name?\n";
 		cout << "Name: ";
 		cin >> name;
-		pName[choice] = name + "\t";
-		SCORE[choice][0] = pName[choice];
-
 		cout << "\nWhat is your player score?\n";
 		cout << "Score: ";
-		cin >> pScore[choice];
-		SCORE[choice][1] = pScore[choice];
-		stringstream playerScore(pScore[choice]);
-		int x = 0;
-		playerScore >> x;
-		int scoreValues[scores];
+		cin >> inputScore;
+		
+		stringstream ss;
+		ss << inputScore;
+		string highScore = ss.str();
 
-		for (int l; l < scores; l++)
+		for (int m = 0; m < players; m++)
 		{
-			stringstream tmp(SCORE[l][1]);
-			tmp >> scoreValues;
+			stringstream tmp(SCORE[m][1]);
+			tmp >> scoring[m];
 		}
+		
+		int lmnt = (players - 1);
+		int lmnt2 = (players - 1);
 
-		// Acceptance criteria
-		if (x > 500 && x < 5000)
+		if (!(inputScore < scoring[players - 1]))
 		{
-			// Clear the screen and print the scoreboard
-			system("CLS");
-			for (int i = 0; i < players; i++)
+			while (inputScore > scoring[lmnt - 1] && lmnt > 0)
 			{
-				for (int j = 0; j < scores; j++)
-				{
-					cout << SCORE[i][j];
-				}
-				cout << "\n";
+				--lmnt;
+			}
+			while (lmnt < lmnt2)
+			{
+				SCORE[lmnt2][0] = SCORE[lmnt2 - 1][0];
+				SCORE[lmnt2][1] = SCORE[lmnt2 - 1][1];
+				--lmnt2;
+				SCORE[lmnt][0] = name + "\t";
+				SCORE[lmnt][1] = highScore;
 			}
 		}
 		else
 		{
-			cout << "That is an invalid score, yo!";
+			cout << "That score is too low, yo!\n";
 		}
 	}
 	return 0;
