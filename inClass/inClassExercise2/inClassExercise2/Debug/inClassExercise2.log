@@ -1,0 +1,3 @@
+﻿  inClassExercise2.cpp
+c:\users\user\documents\github\dailyprojects_c\inclass\inclassexercise2\inclassexercise2\inclassexercise2.cpp(13): warning C4305: 'initializing': truncation from 'double' to 'float'
+  inClassExercise2.vcxproj -> C:\Users\User\Documents\GitHub\dailyProjects_C\inClass\inClassExercise2\Debug\inClassExercise2.exe
