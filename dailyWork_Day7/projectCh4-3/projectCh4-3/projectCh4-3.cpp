@@ -36,20 +36,22 @@ void play(int aSecretNumber)
 	int tries = 0;
 	do
 	{
-		askNumber(MIN_NUMBER, MAX_NUMBER);
-		if (aSecretNumber > secretNumber)
+		input = askNumber(MIN_NUMBER, MAX_NUMBER);
+		if (input > secretNumber)
 		{
-			cout << "Too high!\n\n";
+			cout <<  input << " is higher than the secret number!\n\n";
+			++tries;
+			cout << "Try another number\n\n";
+			input = 0;
 		}
-		else if (aSecretNumber < secretNumber)
+		else if (input < secretNumber)
 		{
-			cout << "Too low!\n\n";
+			cout << input << " is lower than the secret number!\n\n";
+			++tries;
+			cout << "Try another number\n\n";
+			input = 0;
 		}
-		++tries;
-		cout << "Try another number: ";
-		cin.clear();
-		cin.ignore();
-	} while (aSecretNumber != secretNumber);
+	} while (input != secretNumber);
 	cout << "\nThat's it! You got it in " << tries << " guesses!\n";
 }
 
@@ -85,10 +87,13 @@ int askNumber(int MIN_NUMBER, int MAX_NUMBER)
 				return input;
 			}
 		}
+		cin.clear();
+		cin.ignore();
 	}
 }
 
 void randomNumber(int MIN_NUMBER, int MAX_NUMBER)
 {
+	srand(time(NULL));
 	secretNumber = MIN_NUMBER + rand() % ((MAX_NUMBER + 1) - MIN_NUMBER);
 }
