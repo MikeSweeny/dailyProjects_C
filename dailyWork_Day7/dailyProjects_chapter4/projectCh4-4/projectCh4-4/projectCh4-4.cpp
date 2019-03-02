@@ -16,8 +16,8 @@ int getChoice();
 const int NUM_WORDS = 5;
 int choice = getChoice();
 
-const string h;
-string w;
+string h = "h";
+string w = "w";
 
 
 int main()
