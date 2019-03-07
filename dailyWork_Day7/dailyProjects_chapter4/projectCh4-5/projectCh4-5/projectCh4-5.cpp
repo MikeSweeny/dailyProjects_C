@@ -5,93 +5,119 @@
 
 using namespace std;
 
-const int scores = 5;
+const int scores = 2;
 const int players = 5;
-void SetDefaultEntries(const int, const int);
-void DisplayTable();
+string Score[players][scores];
+void SetDefaultEntries(string s[players][scores]);
+void DisplayTable(string s[players][scores]);
 void InsertEntry();
 
 
 int main()
 {
-	cout << "Oh look a dumb score chart!\n\n";
-	string name;
-
-	int inputScore;
-
-	int score;
-	int scoring[players];
-	string pName[5] = { "" };
-	
-	while (true)
+	int choice = 0;
+	SetDefaultEntries(Score);
+	cout << "\tOh look a dumb score chart!\n";
+	while (bool play = true)
 	{
-		for (int i = 0; i < players; i++)
+		if (choice == 0)
 		{
-			for (int j = 0; j < scores; j++)
-			{
-				cout << SCORE[i][j];
-			}
+			cout << "\n1 - Quit\n";
+			cout << "2 - Display Table\n";
+			cout << "3 - Insert New Entry\n\n";
+			cout << "Select an option: ";
+			cin >> choice;
 			cout << "\n";
 		}
-		// Set your name and score
-		cout << "\nWhat is your player name?\n";
-		cout << "Name: ";
-		cin >> name;
-		cout << "\nWhat is your player score?\n";
-		cout << "Score: ";
-		cin >> inputScore;
-
-		stringstream ss;
-		ss << inputScore;
-		string highScore = ss.str();
-
-		for (int m = 0; m < players; m++)
+		if (choice == 1)
 		{
-			stringstream tmp(SCORE[m][1]);
-			tmp >> scoring[m];
+			return 0;
 		}
-
-		int lmnt = (players - 1);
-		int lmnt2 = (players - 1);
-
-		if (!(inputScore < scoring[players - 1]))
+		if (choice == 2)
 		{
-			while (inputScore > scoring[lmnt - 1] && lmnt > 0)
-			{
-				--lmnt;
-			}
-			while (lmnt < lmnt2)
-			{
-				SCORE[lmnt2][0] = SCORE[lmnt2 - 1][0];
-				SCORE[lmnt2][1] = SCORE[lmnt2 - 1][1];
-				--lmnt2;
-				SCORE[lmnt][0] = name + "\t";
-				SCORE[lmnt][1] = highScore;
-			}
+			DisplayTable(Score);
+			choice = 0;
 		}
-		else
+		if (choice == 3)
 		{
-			cout << "That score is too low, yo!\n";
+			InsertEntry();
+			choice = 0;
 		}
 	}
 	return 0;
 }
 
-void SetDefaultEntries(const int players, const int scores)
+void SetDefaultEntries(string s[players][scores])
 {
-	string SCORE[players][scores]
+	for (int i = 0; i < players; i++)
 	{
-		{"Sweeny\t", "5000"},
-		{"Sweeny\t", "4000"},
-		{"Sweeny\t", "3000"},
-		{"Sweeny\t", "2000"},
-		{"Sweeny\t", "1000"}
-
-	};
+		Score[i][0] = "SWEENY";
+		Score[i][1] = "1000";
+	}
 }
 
-void DisplayTable()
+void DisplayTable(string s[players][scores])
 {
-	SetDefaultEntries(players, scores);
+	for (int i = 0; i < players; i++)
+	{
+		for (int j = 0; j < scores; j++)
+		{
+			cout << Score[i][j] << "\t";
+		}
+		cout << "\n";
+	}
+	cout << "\n";
+}
 
+void InsertEntry()
+{
+	string name;
+	int inputScore;
+	int score;
+	int scoring[players];
+	// Set your name and score
+	cout << "\nWhat is your player name?\n";
+	cout << "Name: ";
+	cin >> name;
+	cout << "\nWhat is your player score?\n";
+	cout << "Score: ";
+	cin >> inputScore;
+
+	stringstream ss;
+	ss << inputScore;
+	string highScore = ss.str();
+
+	for (int m = 0; m < players; m++)
+	{
+		stringstream tmp(Score[m][1]);
+		tmp >> scoring[m];
+	}
+
+	int lmnt = (players - 1);
+	int lmnt2 = (players - 1);
+
+	if (!(inputScore < scoring[players - 1]))
+	{
+		while (inputScore > scoring[lmnt - 1] && lmnt > 0)
+		{
+			--lmnt;
+		}
+		if (Score[lmnt][1] > Score[lmnt2][1])
+		{
+			Score[lmnt2][0] = Score[lmnt2 - 1][0];
+			Score[lmnt2][1] = Score[lmnt2 - 1][1];
+			--lmnt2;
+		}
+		if (lmnt < lmnt2)
+		{
+			Score[lmnt][0] = name;
+			Score[lmnt][1] = highScore; 
+		}
+		lmnt = (players - 1);
+		lmnt2 = (players - 1);
+	}
+	else
+	{
+		cout << "That score is too low, yo!\n";
+	}
 }

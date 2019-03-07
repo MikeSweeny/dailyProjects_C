@@ -1,0 +1,5 @@
+﻿  projectCh5-5.cpp
+c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(104): error C4716: 'Remove': must return a value
+c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(97): error C4716: 'Add': must return a value
+c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(90): error C4716: 'Transfer': must return a value
+c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(73): error C4700: uninitialized local variable 'amount' used
