@@ -1,5 +1,6 @@
 #include "pch.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -10,15 +11,25 @@ public:
 	void Talk();
 	void Eat(int food = 4);
 	void Play(int fun = 4);
+	void PerformTrick();
 
 private:
 	int m_Hunger;
 	int m_Boredom;
 	static const int MAX_HUNGER = 10;
+	static const int NUM_TRICKS = 3;
+	static const string TRICKS[NUM_TRICKS];
 	bool m_IsAlive = true;
 	int GetMood() const;
 	void PassTime(int time = 1);
 
+};
+
+const string Critter::TRICKS[NUM_TRICKS] =
+{
+	"Roll Over",
+	"Jump",
+	"Backflip"
 };
 
 Critter::Critter(int hunger, int boredom) :
@@ -109,6 +120,21 @@ void Critter::Play(int fun)
 	PassTime();
 }
 
+void Critter::PerformTrick()
+{
+	if (GetMood() > 5)
+	{
+		cout << "I don't feel like doing a trick\n";
+	}
+	else
+	{
+		int choice = (rand() % NUM_TRICKS);
+		string trick = TRICKS[choice];
+		cout << "I " << trick << ".\n";
+	}
+	PassTime();
+}
+
 int main()
 {
 	Critter crit;
@@ -121,7 +147,8 @@ int main()
 		cout << "0 - Quit\n";
 		cout << "1 - Listen to your critter\n";
 		cout << "2 - Feed your critter\n";
-		cout << "3 - Play with your critter\n\n";
+		cout << "3 - Play with your critter\n";
+		cout << "4 - Ask your critter to perform a trick!\n\n";
 
 		cout << "Choice: ";
 		cin >> choice;
@@ -139,6 +166,9 @@ int main()
 			break;
 		case 3:
 			crit.Play();
+			break;
+		case 4:
+			crit.PerformTrick();
 			break;
 		default:
 			cout << "\nSorry, but " << choice << " isn't a valid choice.\n";

@@ -1,0 +1,3 @@
+﻿  projectCh7-2.cpp
+c:\users\mike\documents\github\dailyprojects_c\dailywork_day17\dailyprojects_chapter7\projectch7-2\projectch7-2\projectch7-2.cpp(204): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  projectCh7-2.vcxproj -> C:\Users\Mike\Documents\GitHub\dailyProjects_C\dailyWork_Day17\dailyProjects_chapter7\projectCh7-2\Debug\projectCh7-2.exe
