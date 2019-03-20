@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  critter.cpp
+  critterFarm.cpp
+  projectsCh8-2.cpp
+c:\users\mike\documents\github\dailyprojects_c\dailywork_day18\dailyprojects_chapter8\projectsch8-2\projectsch8-2\projectsch8-2.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  projectsCh8-2.vcxproj -> C:\Users\Mike\Documents\GitHub\dailyProjects_C\dailyWork_Day18\dailyProjects_chapter8\projectsCh8-2\Debug\projectsCh8-2.exe
