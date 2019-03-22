@@ -20,11 +20,9 @@ public:
 	void Display() const;
 	int Count() const;
 	int Top() const;
-	void TakeDisk(Peg &aPeg);
-	void DropDisk(Peg &aPeg);
 	bool IsLegalMove() const;
 	bool IsWon(Peg &aPeg) const;
-	void Push(DiskNode &data);
+	void Push(int data);
 	void Pop();
 	void Clear();
 

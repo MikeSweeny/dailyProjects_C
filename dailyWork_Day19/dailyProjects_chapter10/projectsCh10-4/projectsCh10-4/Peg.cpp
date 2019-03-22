@@ -27,26 +27,18 @@ bool Peg::IsEmpty() const
 
 void Peg::Display() const
 {
-	if (Top() == ERROR)
+	if (m_pHead == NULL)
 	{
-		cout << "ERROR - The stack is empty\n";
+		cout << "<EMPTY>\n";
+		return;
 	}
-	else
+	DiskNode *pDiskNode = m_pTail;
+
+	while (pDiskNode != NULL)
 	{
-		if (m_pHead == NULL)
-		{
-			cout << "<EMPTY>\n";
-			return;
-		}
-		DiskNode *pDiskNode = m_pHead;
-
-		while (pDiskNode != NULL)
-		{
-			cout << pDiskNode->m_diskSize << "\n";
-			pDiskNode = pDiskNode->m_pNext;
-		}
+		cout << pDiskNode->m_diskSize << "\n";
+		pDiskNode = pDiskNode->m_pPrev;
 	}
-
 }
 
 int Peg::Count() const
@@ -74,34 +66,6 @@ int Peg::Top() const
 	}
 }
 
-void Peg::TakeDisk(Peg &aPeg)
-{
-	if (Top() == ERROR)
-	{
-		cout << "ERROR - The stack is empty\n";
-	}
-	else
-	{
-		m_HandDisk = m_pTail;
-		aPeg.Pop();
-		cout << "You picked up " << m_HandDisk << " from Peg: " << aPeg.m_pegNum << "\n";
-	}
-}
-
-void Peg::DropDisk(Peg &aPeg)
-{
-	if (IsLegalMove())
-	{
-		aPeg.Push(*m_HandDisk);
-		cout << "You place " << m_HandDisk << " on Peg: " << "\n";
-		m_HandDisk = NULL;
-	}
-	else
-	{
-		cout << "You cannot place a disk on top of a smaller disk\n";
-	}
-}
-
 bool Peg::IsLegalMove() const
 {
 	if (!m_HandDisk->m_diskSize > Top())
@@ -116,25 +80,25 @@ bool Peg::IsLegalMove() const
 
 bool Peg::IsWon(Peg &aPeg) const
 {
-	DiskNode *pDiskNode1 = aPeg.m_pHead;
-	DiskNode *pDiskNode2 = aPeg.m_pHead->m_pNext;
-	DiskNode *pDiskNode3 = aPeg.m_pTail->m_pPrev;
-	DiskNode *pDiskNode4 = aPeg.m_pTail;
-	if (pDiskNode1->m_diskSize == 4 &&
-		pDiskNode2->m_diskSize == 3 &&
-		pDiskNode3->m_diskSize == 2 &&
-		pDiskNode4->m_diskSize == 1)
+if (aPeg.Count() == 4)
 	{
-		return 1;
+		if (m_pHead->m_diskSize == 4 &
+			m_pHead->m_pNext->m_diskSize == 3 &
+			m_pTail->m_pPrev->m_diskSize == 2 &
+			m_pTail->m_diskSize == 1)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
 	}
-	else
-	{
-		return 0;
-	}
+	return 0;
 }
 
 
-void Peg::Push(DiskNode &data)
+void Peg::Push(int data)
 {
 	DiskNode *pDiskNode = new DiskNode(data);
 

@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <vector>
+#include <array>
 #include "DiskNode.h"
 #include "Peg.h"
 
@@ -19,16 +21,16 @@ public:
 
 	void WelcomePlayer() const;
 	void DisplayInstructions() const;
+	void DisplayPegs() const;
+	void MoveDisk();
 	void Announcewinner() const;
-	void Play() const;
+	void Play();
 
 	void Reset();
 
 private:
 
-	Peg *peg1;
-	Peg *peg2;
-	Peg *peg3;
+	Peg Pegs[3];
 
 };
 
