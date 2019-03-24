@@ -47,26 +47,39 @@ void Peg::Display() const
 				cout << "   |\n";
 			}
 		}
-		if (pDiskNode->m_diskSize == 1)
+		if (pDiskNode != NULL)
 		{
-			cout << "   *\n";
-			pDiskNode = pDiskNode->m_pPrev;
+			if (pDiskNode->m_diskSize == 1)
+			{
+				cout << "   *\n";
+				pDiskNode = pDiskNode->m_pPrev;
+			}
 		}
-		if (pDiskNode->m_diskSize == 2)
+		if (pDiskNode != NULL)
 		{
-			cout << "  ***\n";
-			pDiskNode = pDiskNode->m_pPrev;
+			if (pDiskNode->m_diskSize == 2)
+			{
+				cout << "  ***\n";
+				pDiskNode = pDiskNode->m_pPrev;
+			}
 		}
-		if (pDiskNode->m_diskSize == 3)
+		if (pDiskNode != NULL)
 		{
-			cout << " *****\n";
-			pDiskNode = pDiskNode->m_pPrev;
+			if (pDiskNode->m_diskSize == 3)
+			{
+				cout << " *****\n";
+				pDiskNode = pDiskNode->m_pPrev;
+			}
 		}
-		if (pDiskNode->m_diskSize == 4)
+		if (pDiskNode != NULL)
 		{
-			cout << "*******\n";
-			pDiskNode = pDiskNode->m_pPrev;
+			if (pDiskNode->m_diskSize == 4)
+			{
+				cout << "*******\n";
+				pDiskNode = pDiskNode->m_pPrev;
+			}
 		}
+
 		
 	}
 }

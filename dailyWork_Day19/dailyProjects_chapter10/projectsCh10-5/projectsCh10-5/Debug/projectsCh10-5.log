@@ -1,6 +1,2 @@
-﻿  Peg.cpp
-c:\users\user\documents\github\dailyprojects_c\dailywork_day19\dailyprojects_chapter10\projectsch10-5\projectsch10-5\peg.cpp(100): warning C4804: '>': unsafe use of type 'bool' in operation
-c:\users\user\documents\github\dailyprojects_c\dailywork_day19\dailyprojects_chapter10\projectsch10-5\projectsch10-5\peg.cpp(115): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
-c:\users\user\documents\github\dailyprojects_c\dailywork_day19\dailyprojects_chapter10\projectsch10-5\projectsch10-5\peg.cpp(116): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
-c:\users\user\documents\github\dailyprojects_c\dailywork_day19\dailyprojects_chapter10\projectsch10-5\projectsch10-5\peg.cpp(117): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
-  projectsCh10-5.vcxproj -> C:\Users\User\Documents\GitHub\dailyProjects_C\dailyWork_Day19\dailyProjects_chapter10\projectsCh10-5\Debug\projectsCh10-5.exe
+﻿  Game.cpp
+  projectsCh10-5.vcxproj -> C:\Users\Mike\Documents\GitHub\dailyProjects_C\dailyWork_Day19\dailyProjects_chapter10\projectsCh10-5\Debug\projectsCh10-5.exe

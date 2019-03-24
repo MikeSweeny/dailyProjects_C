@@ -23,11 +23,11 @@ void Game::WelcomePlayer() const
 
 void Game::DisplayInstructions() const
 {
-	cout << "The object of the game is to move all 4 pegs from Peg 1 to Peg 3.\n";
-	cout << "You can only move one peg at a time.\n";
-	cout << "You can only move the topmost disk from a peg.\n";
-	cout << "You cannot place a disk on top of a smaller disk.\n";
-	cout << "You win by replicating the original stack on Peg 3.\n\n";
+	cout << "The object of the game is to move all 4 'disks' from Peg 1 to Peg 3.\n";
+	cout << "-> You can only move one 'disk' at a time.\n";
+	cout << "-> You can only move the topmost 'disk' from a peg.\n";
+	cout << "-> You cannot place any 'disk' on top of a smaller 'disk'.\n";
+	cout << "-> You win by replicating the original stack on Peg 3.\n\n";
 }
 
 void Game::DisplayPegs() const
@@ -44,9 +44,9 @@ void Game::DisplayPegs() const
 void Game::Announcewinner() const
 {
 	system("CLS");
-	cout << "============================================\n";
-	cout << "<<<<<<<< CONGRATULATIONS! YOU WON!  >>>>>>>>\n";
-	cout << "============================================\n\n";
+	cout << "=============================================\n";
+	cout << "<<<<<<<<  CONGRATULATIONS! YOU WON!  >>>>>>>>\n";
+	cout << "=============================================\n\n";
 	cout << "\nPeg1:\n";
 	Pegs[0].Display();
 	cout << "\nPeg2:\n";
@@ -54,9 +54,9 @@ void Game::Announcewinner() const
 	cout << "\nPeg3:\n";
 	Pegs[2].Display();
 	cout << "\n\n";
-	cout << "============================================\n";
-	cout << "<<<<<<<< CONGRATULATIONS! YOU WON!  >>>>>>>>\n";
-	cout << "============================================\n\n";
+	cout << "=============================================\n";
+	cout << "<<<<<<<<  CONGRATULATIONS! YOU WON!  >>>>>>>>\n";
+	cout << "=============================================\n\n";
 }
 
 void Game::MoveDisk()
@@ -89,14 +89,18 @@ void Game::MoveDisk()
 				}
 				else
 				{
-					cout << "Not a valid move, try again.\n";
+					cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n";
+					cout << "You cannot place bigger 'disks' on smaller 'disks'!\n";
+					cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n";
 					validMove = true;
 				}
 			}
 		}
 		else
 		{
+			cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n";
 			cout << "The first peg you chose is empty, please try again.\n";
+			cout << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n";
 		}
 	}
 	

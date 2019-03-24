@@ -11,6 +11,7 @@ int main()
 	string replay = "Y";
 	while (replay == "Y")
 	{
+		system("CLS");
 		HanoiGame.Reset();
 		HanoiGame.Play();
 
@@ -19,5 +20,5 @@ int main()
 		cin >> choice;
 		replay = toupper(choice);
 	}
-	   	 
+	return 0;
 }
