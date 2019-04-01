@@ -60,6 +60,7 @@ void Game::AnnounceWinner() const
 
 void Game::MakeLegalSwap()
 {
+	// Steven - Check your operator, | may run however its incorrect.
 	if (Pegs[1].Top() == -1 | Pegs[0].Top() < Pegs[1].Top() && Pegs[0].Top() != -1)
 	{
 		MoveDisk(0, 1);
@@ -70,6 +71,7 @@ void Game::MakeLegalSwap()
 		MoveDisk(1, 0);
 		DisplayPegs();
 	}
+	// Steven - Check your operator, | may run however its incorrect.
 	if (Pegs[2].Top() == -1 | Pegs[0].Top() < Pegs[2].Top() && Pegs[0].Top() != -1)
 	{
 		MoveDisk(0, 2);
@@ -80,6 +82,7 @@ void Game::MakeLegalSwap()
 		MoveDisk(2, 0);
 		DisplayPegs();
 	}
+	// Steven - Check your operator, | may run however its incorrect.
 	if (Pegs[2].Top() == -1 | Pegs[1].Top() < Pegs[2].Top() && Pegs[1].Top() != -1)
 	{
 		MoveDisk(1, 2);
@@ -142,7 +145,7 @@ void Game::Play()
 	}
 }
 
-
+//Steven - This could be done with a simple loop
 void Game::Reset()
 {
 	//Clear all pegs

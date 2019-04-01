@@ -19,6 +19,7 @@ bool Peg::IsEmpty() const
 	{
 		return true;
 	}
+	//Steven - else isn't needed, you just return false.
 	else
 	{
 		return false;
@@ -47,6 +48,9 @@ void Peg::Display() const
 				cout << "   |\n";
 			}
 		}
+		/*Steven - When you check to see if pDiskNode is not NULL you should contain the rest of your code
+				   within that if statement This could also be broken down to a smaller function.
+		*/
 		if (pDiskNode != NULL)
 		{
 			if (pDiskNode->m_diskSize == 1)
@@ -99,6 +103,13 @@ int Peg::Count() const
 
 int Peg::Top() const
 {
+	/* Steven - What if you were to try != and return your m_diskSize
+		if (Count() != 0)
+		{
+			return m_pTail->m_diskSize;
+		}
+		return -1;
+	*/
 	if (Count() == 0)
 	{
 		return -1;
@@ -122,7 +133,7 @@ bool Peg::IsLegalMove() const
 	}
 }
 
-bool Peg::IsWon(Peg &aPeg) const
+bool Peg::IsWon(/*Const*/Peg &aPeg) const //Steven - Peg doesn't change it should be a const
 {
 	if (aPeg.Count() == 4)
 	{
@@ -142,7 +153,7 @@ bool Peg::IsWon(Peg &aPeg) const
 }
 
 
-void Peg::Push(int data)
+void Peg::Push(int data)//Steven - Should be a const and probably a reference?
 {
 	DiskNode *pDiskNode = new DiskNode(data);
 
