@@ -13,7 +13,7 @@ string Player::GetName() const
 	return m_Name;
 }
 
-void Player::TakeSticks(Pile &aPile)
+void Player::TakeSticks(Pile &aPile)//Steven - aPile should be a const.
 {
 	// Announce who's turn it is
 	cout << m_Name << " it is your turn to take sticks.\n";

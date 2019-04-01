@@ -37,6 +37,7 @@ void Pile::ReceiveMove(int stickRemove)
 
 bool Pile::IsWinner() const
 {
+	//Steven - You don't need the else.
 	if (m_CurrentSticks == 0)
 	{
 		return 1;
