@@ -1,5 +1,2 @@
 ﻿  Game.cpp
-c:\users\user\documents\github\dailyprojects_c\dailywork_day22+23\dailyprojects_chapter12\projectsch12-5\projectsch12-5\game.cpp(63): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
-c:\users\user\documents\github\dailyprojects_c\dailywork_day22+23\dailyprojects_chapter12\projectsch12-5\projectsch12-5\game.cpp(73): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
-c:\users\user\documents\github\dailyprojects_c\dailywork_day22+23\dailyprojects_chapter12\projectsch12-5\projectsch12-5\game.cpp(83): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
-  projectsCh12-5.vcxproj -> C:\Users\User\Documents\GitHub\dailyProjects_C\dailyWork_Day22+23\dailyProjects_chapter12\projectsCh12-5\Debug\projectsCh12-5.exe
+  projectsCh12-5.vcxproj -> C:\Users\User\Documents\GitHub\dailyProjects_C\!markThese\projectsCh12-5_HanoiRecursive\Debug\projectsCh12-5.exe

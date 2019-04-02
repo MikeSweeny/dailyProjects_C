@@ -61,7 +61,7 @@ void Game::AnnounceWinner() const
 void Game::MakeLegalSwap()
 {
 	// Steven - Check your operator, | may run however its incorrect.
-	if (Pegs[1].Top() == -1 | Pegs[0].Top() < Pegs[1].Top() && Pegs[0].Top() != -1)
+	if (Pegs[1].Top() == -1 || Pegs[0].Top() < Pegs[1].Top() && Pegs[0].Top() != -1)
 	{
 		MoveDisk(0, 1);
 		DisplayPegs();
@@ -72,7 +72,7 @@ void Game::MakeLegalSwap()
 		DisplayPegs();
 	}
 	// Steven - Check your operator, | may run however its incorrect.
-	if (Pegs[2].Top() == -1 | Pegs[0].Top() < Pegs[2].Top() && Pegs[0].Top() != -1)
+	if (Pegs[2].Top() == -1 || Pegs[0].Top() < Pegs[2].Top() && Pegs[0].Top() != -1)
 	{
 		MoveDisk(0, 2);
 		DisplayPegs();
@@ -83,7 +83,7 @@ void Game::MakeLegalSwap()
 		DisplayPegs();
 	}
 	// Steven - Check your operator, | may run however its incorrect.
-	if (Pegs[2].Top() == -1 | Pegs[1].Top() < Pegs[2].Top() && Pegs[1].Top() != -1)
+	if (Pegs[2].Top() == -1 || Pegs[1].Top() < Pegs[2].Top() && Pegs[1].Top() != -1)
 	{
 		MoveDisk(1, 2);
 		DisplayPegs();
