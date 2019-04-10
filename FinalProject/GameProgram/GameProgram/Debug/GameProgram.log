@@ -1,11 +1,91 @@
-﻿  Menu.cpp
+﻿  Game.cpp
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C3646: 'warGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C3646: 'fishGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C3646: 'm_Players': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2143: syntax error: missing ',' before '['
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2143: syntax error: missing ')' before ';'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2238: unexpected token(s) preceding ';'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.cpp(31): error C2065: 'm_Players': undeclared identifier
+  GameProgram.cpp
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C3646: 'warGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C3646: 'fishGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  GoFish.cpp
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C3646: 'warGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C3646: 'fishGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C3646: 'm_Players': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2143: syntax error: missing ',' before '['
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2143: syntax error: missing ')' before ';'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2238: unexpected token(s) preceding ';'
+  Menu.cpp
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C3646: 'warGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C3646: 'fishGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(49): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(50): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(52): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(55): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(57): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
-c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(64): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(66): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(69): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(71): warning C4305: 'argument': truncation from 'double' to 'float'
-  GameProgram.vcxproj -> C:\Users\User\Documents\GitHub\dailyProjects_C\FinalProject\GameProgram\Debug\GameProgram.exe
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(51): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(54): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(56): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(63): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(65): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(68): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(70): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(80): error C2065: 'warGame': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(84): error C2065: 'fishGame': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(93): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.cpp(97): warning C4305: 'argument': truncation from 'double' to 'float'
+  Player.cpp
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C3646: 'warGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C3646: 'fishGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C3646: 'm_Players': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2143: syntax error: missing ',' before '['
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2143: syntax error: missing ')' before ';'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2238: unexpected token(s) preceding ';'
+  War.cpp
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C3646: 'warGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C3646: 'fishGame': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\menu.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C3646: 'm_Players': unknown override specifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2143: syntax error: missing ',' before '['
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2143: syntax error: missing ')' before ';'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(29): error C2238: unexpected token(s) preceding ';'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(18): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(20): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(21): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(22): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(28): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(42): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(43): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(47): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(49): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(52): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(56): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(57): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(61): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(63): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(66): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(88): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(90): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(92): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(105): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(107): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(109): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(110): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(111): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(112): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(113): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(115): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(125): error C2065: 'm_Players': undeclared identifier
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(125): error C2660: 'Game::Transfer': function does not take 2 arguments
+  c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\game.h(14): note: see declaration of 'Game::Transfer'
+c:\users\user\documents\github\dailyprojects_c\finalproject\gameprogram\gameprogram\war.cpp(133): error C2065: 'm_Players': undeclared identifier
+  Generating Code...

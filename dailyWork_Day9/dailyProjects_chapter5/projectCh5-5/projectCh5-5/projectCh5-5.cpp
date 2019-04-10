@@ -6,24 +6,24 @@
 
 using namespace std;
 
-void Shuffle(vector<const string*> &deck);
-void DisplayDeck(const int *deckSize, const int *numbers, vector<const string*> deck);
-void DisplayHand(vector<const string*> hand, const int handSize);
+void Shuffle(vector<const string> &deck);
+void DisplayDeck(const int *deckSize, const int *numbers, vector<const string> deck);
+void DisplayHand(vector<const string> hand, const int handSize);
 //vector<const string*> Transfer(int trade, vector<const string*> hand, vector<const string*> deck);
 //vector<const string*> Add(vector<const string*> hand, vector<const string*> deck);
 //vector<const string*> Remove(vector<const string*> hand, vector<const string*> deck);
 
 
-vector<string*> Transfer(vector<const string*> source, vector<const string*> destination, int amount);
-vector<string*> Add(vector<const string*> source, vector<const string*> destination, int amount);
-vector<string*> Remove(vector<const string*> source, int amount);
+void Transfer(vector<const string> source, vector<const string> destination, int amount);
+void Add(vector<const string> source, vector<const string> destination, int amount);
+void Remove(vector<const string> source, int amount);
 
 
 int main()
 {
 	cout << "A deck of cards!\n\n";
 	bool play = true;
-	int amount;
+	int amount = 0;
 	const int numbers = 13;
 	const int suits = 4;
 	const int deckSize = 52;
@@ -35,15 +35,15 @@ int main()
 		{"2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As"},
 		{"2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad"}
 	};
-	vector<const string*> deck;
+	vector<const string> deck;
 	for (int i = 0; i < suits; i++)
 	{
 		for (int j = 0; j < numbers; j++)
 		{
-			deck.push_back(&Cards[i][j]);
+			deck.push_back(Cards[i][j]);
 		}
 	}
-	vector<const string*> hand(handSize);
+	vector<const string> hand(handSize);
 	while (play)
 	{
 		int input;
@@ -81,21 +81,21 @@ int main()
 }
 
 
-vector<string*> Transfer(vector<const string*> source, vector<const string*> destination, int amount)
+void Transfer(vector<const string> source, vector<const string> destination, int amount)
 {
 	cout << "How many cards would you like to transfer: ";
 	cin >> amount;
 	Add(source, destination, amount);
 	Remove(source, amount);
 }
-vector<string*> Add(vector<const string*> source, vector<const string*> destination, int amount)
+void Add(vector<const string> source, vector<const string> destination, int amount)
 {
 	for (int i = 0; i < amount; i++)
 	{
 		destination.push_back(source[source.size() - (1 + i)]);
 	}	
 }
-vector<string*> Remove(vector<const string*> source, int amount)
+void Remove(vector<const string> source, int amount)
 {
 	for (int i = 0; i < amount; i++)
 	{
@@ -148,11 +148,11 @@ vector<string*> Remove(vector<const string*> source, int amount)
 //	return hand;
 //}
 
-void DisplayDeck(const int *deckSize, const int *numbers, vector<const string*> deck)
+void DisplayDeck(const int *deckSize, const int *numbers, vector<const string> deck)
 {
 	for (int j = 0; j < *deckSize; j++)
 	{
-		cout << *deck[j] << "  ";
+		cout << deck[j] << "  ";
 		if (j == 12)
 		{
 			cout << "\n";
@@ -173,16 +173,16 @@ void DisplayDeck(const int *deckSize, const int *numbers, vector<const string*> 
 	cout << "\n";
 }
 
-void DisplayHand(vector<const string*> hand, const int handSize)
+void DisplayHand(vector<const string> hand, const int handSize)
 {
 	for (int i = 0; i < handSize; i++)
 	{
-		cout << hand[i] << " ";
+		cout << &hand[i] << " ";
 	}
 	cout << "\n\n";
 }
 
-void Shuffle(vector<const string*> &deck)
+void Shuffle(vector<const string> &deck)
 {
 	random_shuffle(deck.begin(), deck.end());
 	cout << "Deck has been shuffled!\n";

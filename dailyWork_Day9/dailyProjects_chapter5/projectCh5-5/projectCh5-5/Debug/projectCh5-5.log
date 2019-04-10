@@ -1,5 +1,44 @@
 ﻿  projectCh5-5.cpp
-c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(104): error C4716: 'Remove': must return a value
-c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(97): error C4716: 'Add': must return a value
-c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(90): error C4716: 'Transfer': must return a value
-c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(73): error C4700: uninitialized local variable 'amount' used
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(943): error C2338: The C++ Standard forbids containers of const elements because allocator<const T> is ill-formed.
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(903): note: see reference to class template instantiation 'std::allocator<_Ty>' being compiled
+          with
+          [
+              _Ty=const std::string
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(360): note: see reference to class template instantiation 'std::allocator_traits<_Alloc>' being compiled
+          with
+          [
+              _Alloc=std::allocator<const std::string>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(360): note: see reference to alias template instantiation 'std::_Rebind_alloc_t<std::allocator<_Ty>,_Ty>' being compiled
+          with
+          [
+              _Ty=const std::string
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(405): note: see reference to class template instantiation 'std::_Vec_base_types<_Ty,_Alloc>' being compiled
+          with
+          [
+              _Ty=const std::string,
+              _Alloc=std::allocator<const std::string>
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(626): note: see reference to class template instantiation 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>' being compiled
+          with
+          [
+              _Ty=const std::string,
+              _Alloc=std::allocator<const std::string>
+          ]
+  c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(38): note: see reference to class template instantiation 'std::vector<const std::string,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=const std::string
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(975): error C2535: '_Ty *std::allocator<_Ty>::address(_Ty &) noexcept const': member function already defined or declared
+          with
+          [
+              _Ty=const std::string
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(969): note: see declaration of 'std::allocator<_Ty>::address'
+          with
+          [
+              _Ty=const std::string
+          ]

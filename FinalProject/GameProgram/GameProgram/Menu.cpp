@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Menu.h"
 
-
 Menu::Menu()
 {
 }
@@ -33,7 +32,7 @@ void Menu::FontColour(string preset)
 	{
 		HANDLE dosHandleOut;
 		dosHandleOut = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(dosHandleOut, 15 | BACKGROUND_GREEN);
+		SetConsoleTextAttribute(dosHandleOut, 14 | BACKGROUND_GREEN);
 	}
 	if (preset == "error")
 	{

@@ -1,15 +1,20 @@
-#pragma once
-#include "pch.h"
-#include <windows.h>
+#ifndef MENU_H
+#define MENU_H
+#include <Windows.h>
 #include <iostream>
 #include <string>
 #include <time.h>
 #include <wincon.h>
 #include <cwchar>
+#include <vector>
+#include <array>
+#include <algorithm>
 using namespace std;
 
 class Menu
 {
+	friend class Game;
+
 public:
 	Menu();
 	~Menu();
@@ -22,6 +27,9 @@ public:
 
 private:
 	bool m_IsPlaying = true;
+	War warGame;
+	GoFish fishGame;
 	
 };
 
+#endif
