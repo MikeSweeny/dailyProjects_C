@@ -73,7 +73,7 @@ void Menu::WelcomePlayer()
 	system("CLS");
 }
 
-void Menu::SelectGame(int select) const
+void Menu::SelectGame(int select)
 {
 	if (select == 1)
 	{

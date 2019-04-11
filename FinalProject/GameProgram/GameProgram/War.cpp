@@ -15,17 +15,17 @@ void War::Flip(vector<string> stack)
 	
 	for (int i = 0; i >= 1; i++)
 	{
-		if (m_Players[m_Current].MainHand.size() != 0)
+		if (manager.m_Players[m_Current].MainHand.size() != 0)
 		{
-			cout << m_Players[m_Current].MainHand.back() << "\t";
-			stack[i] = m_Players[m_Current].MainHand.back();
-			m_Players[m_Current].MainHand.pop_back();
+			cout << manager.m_Players[m_Current].MainHand.back() << "\t";
+			stack[i] = manager.m_Players[m_Current].MainHand.back();
+			manager.m_Players[m_Current].MainHand.pop_back();
 			NextPlayer();
 		}
 		else
 		{
 			RefillHand();
-			ShuffleDeck(m_Players[m_Current].MainHand);
+			ShuffleDeck(manager.m_Players[m_Current].MainHand);
 			Flip(pair);
 		}
 		cout << endl;
@@ -39,31 +39,31 @@ void War::Compare()
 	// Awards the player with the higher card both cards.
 	if (pair[0] > pair[1])
 	{
-		m_Players[0].SideHand.push_back(pair[0]);
-		m_Players[0].SideHand.push_back(pair[1]);
+		manager.m_Players[0].SideHand.push_back(pair[0]);
+		manager.m_Players[0].SideHand.push_back(pair[1]);
 		// If there is a pile, there was a WAR, give this winner that pile as well.
 		if (pile.size() != 0)
 		{
 			for (int i = 0; i < pile.size(); i++)
 			{
-				m_Players[0].SideHand.push_back(pile[i]);
+				manager.m_Players[0].SideHand.push_back(pile[i]);
 			}
 		}
-		cout << "Player " << m_Players->GetName() << " has won the stack!";
+		cout << "Player " << manager.m_Players->GetName() << " has won the stack!";
 	}
 	else if (pair[1] > pair[0])
 	{
-		m_Players[1].SideHand.push_back(pair[0]);
-		m_Players[1].SideHand.push_back(pair[1]);
+		manager.m_Players[1].SideHand.push_back(pair[0]);
+		manager.m_Players[1].SideHand.push_back(pair[1]);
 
 		if (pile.size() != 0)
 		{
 			for (int i = 0; i < pile.size(); i++)
 			{
-				m_Players[1].SideHand.push_back(pile[i]);
+				manager.m_Players[1].SideHand.push_back(pile[i]);
 			}
 		}
-		cout << "Player " << m_Players->GetName() << " has won the stack!";
+		cout << "Player " << manager.m_Players->GetName() << " has won the stack!";
 	}
 	// If neither card is higher, then they must be equal, time to GoToWar!
 	else
@@ -85,11 +85,11 @@ void War::GoToWar()
 void War::RefillHand()
 {
 	// refills the players hand if they are out of cards
-	if (m_Players[m_Current].SideHand.size() != 0)
+	if (manager.m_Players[m_Current].SideHand.size() != 0)
 	{
-		for (int i = 0; i < m_Players[m_Current].SideHand.size(); i++)
+		for (int i = 0; i < manager.m_Players[m_Current].SideHand.size(); i++)
 		{
-			m_Players[m_Current].MainHand.push_back(m_Players[m_Current].SideHand[i]);
+			manager.m_Players[m_Current].MainHand.push_back(manager.m_Players[m_Current].SideHand[i]);
 		}
 	}
 	else
@@ -122,7 +122,7 @@ void War::Deal()
 	{
 		for (int i = 0; i <= deckSize; i++)
 		{
-			Transfer(*deck, m_Players[m_Current].MainHand, 1);
+			Transfer(*deck, manager.m_Players[m_Current].MainHand, 1);
 			NextPlayer();
 		}
 	}
@@ -130,7 +130,7 @@ void War::Deal()
 
 void War::AnnounceWinner()
 {
-	cout << "\n\nConratulations " << m_Players[m_Current].GetName() << " is the Ultimate Commander!\n";
+	cout << "\n\nConratulations " << manager.m_Players[m_Current].GetName() << " is the Ultimate Commander!\n";
 	GameOn = false;
 }
 

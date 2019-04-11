@@ -28,7 +28,7 @@ void Game::SetPlayerName()
 	string *tmp = new string;
 	cout << "Player " << (m_Current + 1) << ", what is your name: ";
 	cin >> *tmp;
-	m_Players[m_Current].SetName(*tmp);
+	manager.m_Players[m_Current].SetName(*tmp);
 	tmp = 0;
 	delete tmp;
 }

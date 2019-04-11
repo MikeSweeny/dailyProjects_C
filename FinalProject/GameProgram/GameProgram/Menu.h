@@ -9,6 +9,8 @@
 #include <vector>
 #include <array>
 #include <algorithm>
+#include "GoFish.h"
+#include "War.h"
 using namespace std;
 
 class Menu
@@ -22,7 +24,7 @@ public:
 	void FontColour(string preset);
 	void SlowPrint(string toType, float minDelay, float maxDelay);
 	void WelcomePlayer();
-	void SelectGame(int select) const;
+	void SelectGame(int select);
 	void ShowMenu();
 
 private:

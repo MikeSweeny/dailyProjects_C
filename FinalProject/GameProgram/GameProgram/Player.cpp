@@ -7,7 +7,6 @@ Player::Player()
 Player::~Player()
 {
 }
-
 string Player::GetName() const
 {
 	return m_Name;

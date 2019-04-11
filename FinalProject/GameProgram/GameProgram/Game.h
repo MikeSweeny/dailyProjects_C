@@ -1,9 +1,12 @@
 #ifndef GAME_H
 #define GAME_H
-#include "Menu.h"
+#include "PlayerManager.h"
+#include <algorithm>
 
 class Game
 {
+	friend class PlayerManager;
+
 public:
 	Game();
 	~Game();
@@ -25,10 +28,9 @@ public:
 	static const int deckSize = 52;
 	static const string Cards[suits][numbers];
 	vector<string> deck[deckSize];
-	static const int NUM_PLAYERS = 2;
-	Player m_Players[NUM_PLAYERS];
 	int m_Current;
 	bool GameOn = true;
+	PlayerManager manager;
 
 private:
 
