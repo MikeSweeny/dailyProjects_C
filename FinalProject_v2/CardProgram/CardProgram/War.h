@@ -21,13 +21,14 @@ public:
 	void AnnounceWinner(int winner);
 	bool GameWon = false;
 
-private:
-
 	vector<string> PlayerMainHand;
 	vector<string> PlayerSideHand;
 	vector<string> CpuMainHand;
 	vector<string> CpuSideHand;
 	vector<string> pile;
 	vector<string> pair;
+
+private:
+
 };
 

@@ -17,7 +17,9 @@ void War::Flip(vector<string> stack)
 	if (PlayerMainHand.size() != 0 && CpuMainHand.size() != 0)
 	{
 		cout << "Your card is: " << PlayerMainHand.back();
+		cout << endl;
 		cout << "My  card  is: " << CpuMainHand.back();
+		cout << endl;
 		stack[0] = PlayerMainHand.back();
 		stack[1] = CpuMainHand.back();
 		PlayerMainHand.pop_back();
@@ -118,21 +120,15 @@ void War::Deal()
 {
 	SetDeck();
 	ShuffleDeck(deck);
-	while (Count(deck) != 0)
+	for (int i = 0; i < (deckSize / 2); i++)
 	{
-		for (int i = 0; i < deckSize; i++)
+		if (Count(deck) != 0)
 		{
 			Transfer(deck, PlayerMainHand, 1);
-			if (count < deckSize)
-			{
-				count++;
-			}
+		}
+		if (Count(deck) != 0)
+		{
 			Transfer(deck, CpuMainHand, 1);
-			if (count < deckSize)
-			{
-				count++;
-			}
-
 		}
 	}
 }

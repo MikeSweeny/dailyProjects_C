@@ -9,15 +9,15 @@ int main()
 	Menu menu;
 	system("color 2f");
 	menu.FontSize(10, 18);
-	menu.WelcomePlayer();
+	//menu.WelcomePlayer();
 	char replay = 'Y';
 	while (replay == 'Y')
 	{
-		menu.ShowGames();
+		//menu.ShowGames();
 		int gameToPlay = menu.SelectGame();
 		if (gameToPlay == 1)
 		{
-			menu.WarInstructions();
+			//menu.WarInstructions();
 			War warGame;
 			warGame.Play();
 		}

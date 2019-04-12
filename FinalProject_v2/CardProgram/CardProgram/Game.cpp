@@ -47,7 +47,7 @@ void Game::Add(vector<string> &source, vector<string> &destination, int amount)
 {
 	for (int i = 0; i < amount; i++)
 	{
-		destination.push_back(source[source.size() - count]);
+		destination.push_back(source.back());
 	}
 }
 
