@@ -13,7 +13,7 @@ PlayerManager::~PlayerManager()
 
 string PlayerManager::GetPlayerName(int playerNum)
 {
-	m_Players[playerNum].GetName();
+	return m_Players[playerNum].GetName();
 }
 
 void PlayerManager::SetPlayerName(int playerNum, string name)
@@ -23,7 +23,7 @@ void PlayerManager::SetPlayerName(int playerNum, string name)
 
 int PlayerManager::GetPlayerScore(int playerNum)
 {
-	m_Players[playerNum].GetScore();
+	return m_Players[playerNum].GetScore();
 }
 
 void PlayerManager::SetPlayerScore(int playerNum, int num)

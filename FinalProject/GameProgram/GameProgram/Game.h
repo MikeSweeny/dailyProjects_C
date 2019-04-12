@@ -6,6 +6,8 @@
 class Game
 {
 	friend class PlayerManager;
+	friend class War;
+	friend class GoFish;
 
 public:
 	Game();
@@ -18,10 +20,10 @@ public:
 	void Add(vector<string> source, vector<string> destination, int amount);
 	void Remove(vector<string> source, int amount);
 	int Count(vector<string> &vToCount);
-	virtual void Deal() = 0;
+	/*virtual void Deal() = 0;
 	virtual void Play() = 0;
 	virtual void AnnounceWinner() = 0;
-	virtual void DisplayInstructions() = 0;
+	virtual void DisplayInstructions() = 0;*/
 
 	static const int numbers = 13;
 	static const int suits = 4;
@@ -36,6 +38,5 @@ private:
 
 	
 };
-
 
 #endif

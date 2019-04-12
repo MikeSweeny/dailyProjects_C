@@ -1,8 +1,11 @@
 #ifndef WAR_H
 #define WAR_H
+#include <vector>
+#include <string>
 #include "Game.h"
+using namespace std;
 
-class War : public Game, public Menu
+class War : public Game
 {
 public:
 	War();

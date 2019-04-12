@@ -9,13 +9,13 @@
 #include <vector>
 #include <array>
 #include <algorithm>
-#include "GoFish.h"
 #include "War.h"
+#include "GoFish.h"
+
 using namespace std;
 
 class Menu
 {
-	friend class Game;
 
 public:
 	Menu();
@@ -29,9 +29,8 @@ public:
 
 private:
 	bool m_IsPlaying = true;
-	War warGame;
-	GoFish fishGame;
 	
 };
+
 
 #endif

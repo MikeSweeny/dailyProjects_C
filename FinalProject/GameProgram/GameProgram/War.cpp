@@ -102,17 +102,17 @@ void War::RefillHand()
 
 void War::DisplayInstructions()
 {
-	SlowPrint("Welcome to ", 0.1, 0.1);
-	FontColour("title");
-	SlowPrint("WAR!", 0.1, 0.1);
-	FontColour("body");
-	SlowPrint(" The classic card game of domination...\n\n", 0.1, 0.1);
-	SlowPrint("The object of the game is to flip the top card of your deck and compare it to the top card of the opponent.\n", 0.1, 0.1);
-	SlowPrint("The player with the higher card gets to keep both cards.\n", 0.1, 0.1);
-	SlowPrint("The player who runs out of cards first, loses.\n", 0.1, 0.1);
-	SlowPrint("Ties are determined by ", 0.1, 0.1);
-	FontColour("title");
-	SlowPrint("GOING TO WAR!\n\n", 0.1, 0.1);
+	menu.SlowPrint("Welcome to ", 0.1, 0.1);
+	menu.FontColour("title");
+	menu.SlowPrint("WAR!", 0.1, 0.1);
+	menu.FontColour("body");
+	menu.SlowPrint(" The classic card game of domination...\n\n", 0.1, 0.1);
+	menu.SlowPrint("The object of the game is to flip the top card of your deck and compare it to the top card of the opponent.\n", 0.1, 0.1);
+	menu.SlowPrint("The player with the higher card gets to keep both cards.\n", 0.1, 0.1);
+	menu.SlowPrint("The player who runs out of cards first, loses.\n", 0.1, 0.1);
+	menu.SlowPrint("Ties are determined by ", 0.1, 0.1);
+	menu.FontColour("title");
+	menu.SlowPrint("GOING TO WAR!\n\n", 0.1, 0.1);
 }
 
 void War::Deal()

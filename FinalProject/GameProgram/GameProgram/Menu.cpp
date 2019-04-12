@@ -3,6 +3,7 @@
 
 Menu::Menu()
 {
+	Game theGame;
 }
 
 

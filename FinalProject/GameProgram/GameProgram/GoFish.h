@@ -1,8 +1,10 @@
 #ifndef GOFISH_H
 #define GOFISH_H
-#include "Game.h"
+#include <vector>
+#include <string>
+using namespace std;
 
-class GoFish : public Game
+class GoFish
 {
 public:
 	GoFish();

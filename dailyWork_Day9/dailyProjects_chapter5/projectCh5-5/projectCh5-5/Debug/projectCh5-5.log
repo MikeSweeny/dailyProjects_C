@@ -27,7 +27,7 @@ c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.1
               _Ty=const std::string,
               _Alloc=std::allocator<const std::string>
           ]
-  c:\users\user\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(38): note: see reference to class template instantiation 'std::vector<const std::string,std::allocator<_Ty>>' being compiled
+  c:\users\mike\documents\github\dailyprojects_c\dailywork_day9\dailyprojects_chapter5\projectch5-5\projectch5-5\projectch5-5.cpp(38): note: see reference to class template instantiation 'std::vector<const std::string,std::allocator<_Ty>>' being compiled
           with
           [
               _Ty=const std::string

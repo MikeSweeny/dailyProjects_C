@@ -1,0 +1,12 @@
+﻿  CardProgram.cpp
+c:\users\mike\documents\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\menu.h(36): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\mike\documents\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\menu.h(37): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\mike\documents\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\menu.h(38): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Game.cpp
+  War.cpp
+c:\users\mike\documents\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\war.cpp(48): warning C4018: '<': signed/unsigned mismatch
+c:\users\mike\documents\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\war.cpp(62): warning C4018: '<': signed/unsigned mismatch
+c:\users\mike\documents\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\war.cpp(91): warning C4018: '<': signed/unsigned mismatch
+c:\users\mike\documents\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\war.cpp(103): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  CardProgram.vcxproj -> C:\Users\Mike\Documents\GitHub\dailyProjects_C\FinalProject_v2\CardProgram\Debug\CardProgram.exe

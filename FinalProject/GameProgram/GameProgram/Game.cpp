@@ -4,6 +4,8 @@
 
 Game::Game()
 {
+	War warGame;
+	GoFish fishGame;
 	string Cards[suits][numbers] =
 	{
 		{"2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac"},
@@ -35,7 +37,7 @@ void Game::SetPlayerName()
 
 void Game::NextPlayer()
 {
-	m_Current = (m_Current + 1) % NUM_PLAYERS;
+	m_Current = (m_Current + 1) % manager.NUM_PLAYERS;
 }
 
 void Game::ShuffleDeck(vector<string> &deck)
