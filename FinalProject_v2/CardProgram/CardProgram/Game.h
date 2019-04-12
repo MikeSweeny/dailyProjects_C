@@ -27,7 +27,7 @@ public:
 
 	static const int deckSize = 52;
 	vector<string> deck;
-	int count;
+	int count = 1;
 
 	static const int numbers = 13;
 	static const int suits = 4;

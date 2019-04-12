@@ -14,7 +14,6 @@ Game::~Game()
 void Game::SetDeck()
 {	
 	string currentCard;
-	int count;
 	const string Cards[suits][numbers] =
 	{
 		{"2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac"},
@@ -48,7 +47,7 @@ void Game::Add(vector<string> &source, vector<string> &destination, int amount)
 {
 	for (int i = 0; i < amount; i++)
 	{
-		destination.push_back(source[i]);
+		destination.push_back(source[source.size() - count]);
 	}
 }
 

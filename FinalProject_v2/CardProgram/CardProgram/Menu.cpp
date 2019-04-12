@@ -41,7 +41,7 @@ void Menu::FontColour(string preset)
 		dosHandleOut = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute(dosHandleOut, 12 | BACKGROUND_GREEN | BACKGROUND_RED | BACKGROUND_INTENSITY);
 	}
-	if (preset == "surprise")
+	if (preset == "notification")
 	{
 		HANDLE dosHandleOut;
 		dosHandleOut = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -77,6 +77,7 @@ void Menu::WarInstructions()
 	SlowPrint("Ties are determined by ", fast, medium);
 	FontColour("title");
 	SlowPrint("GOING TO WAR!\n\n", medium, medium);
+	FontColour("notification");
 }
 
 void Menu::FishInstructions()
@@ -134,7 +135,7 @@ void Menu::WelcomePlayer()
 	SlowPrint("Loading simulated gambling entertainment software", medium, medium);
 	Sleep(600);
 	SlowPrint("...", slow, slow);
-	FontColour("surprise");
+	FontColour("notification");
 	cout << R"(
 ============================================
 Load Complete!                             |
