@@ -1,6 +1,0 @@
-﻿  War.cpp
-d:\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\war.cpp(53): warning C4018: '<': signed/unsigned mismatch
-d:\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\war.cpp(69): warning C4018: '<': signed/unsigned mismatch
-d:\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\war.cpp(102): warning C4018: '<': signed/unsigned mismatch
-d:\github\dailyprojects_c\finalproject_v2\cardprogram\cardprogram\war.cpp(116): warning C4018: '<': signed/unsigned mismatch
-  CardProgram.vcxproj -> D:\GitHub\dailyProjects_C\FinalProject_v2\CardProgram\Debug\CardProgram.exe
