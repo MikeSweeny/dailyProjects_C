@@ -19,6 +19,7 @@ int main()
 		{
 			//menu.WarInstructions();
 			War warGame;
+			warGame.SetDeckSize();
 			warGame.Play();
 		}
 		else if (gameToPlay == 2)

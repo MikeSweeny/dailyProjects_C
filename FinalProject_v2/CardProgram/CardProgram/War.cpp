@@ -12,16 +12,17 @@ War::~War()
 {
 }
 
-void War::Flip(vector<string> stack)
+void War::Flip(vector<string> &stack)
 {
+	cout << "xXx FLIP! xXx\n";
 	if (PlayerMainHand.size() != 0 && CpuMainHand.size() != 0)
 	{
 		cout << "Your card is: " << PlayerMainHand.back();
 		cout << endl;
 		cout << "My  card  is: " << CpuMainHand.back();
 		cout << endl;
-		stack[0] = PlayerMainHand.back();
-		stack[1] = CpuMainHand.back();
+		stack.push_back(PlayerMainHand.back());
+		stack.push_back(CpuMainHand.back());
 		PlayerMainHand.pop_back();
 		CpuMainHand.pop_back();
 	}
@@ -30,19 +31,21 @@ void War::Flip(vector<string> stack)
 		RefillHands();
 		Flip(pair);
 	}
-	cout << endl;
-	cout << "Press any key to continue";
+	cout << "Press any key to continue. . .";
+	cin.ignore();
 	cin.get();
-	cin.clear();
+	cout << endl;
 }
 
 void War::Compare()
 {
 	// Awards the player with the higher card both cards.
-	if (pair[0] > pair[1]) //if player wins
+	if (pair.at(0) > pair.at(1)) //if player wins
 	{
-		PlayerSideHand.push_back(pair[0]);
-		PlayerSideHand.push_back(pair[1]);
+		PlayerSideHand.push_back(pair.at(0));
+		PlayerSideHand.push_back(pair.at(1));
+		pair.pop_back();
+		pair.pop_back();
 
 		// If there is a pile, there was a WAR, give this winner that pile as well.
 		if (pile.size() != 0)
@@ -50,23 +53,28 @@ void War::Compare()
 			for (int i = 0; i < pile.size(); i++)
 			{
 				PlayerSideHand.push_back(pile[i]);
+				pile.pop_back();
 			}
 		}
-		cout << "The pile goes to the human.";
+		cout << "The pile goes to the human.\n\n";
 	}
-	else if (pair[1] > pair[0]) //if cpu wins
+	else if (pair.at(1) > pair.at(0)) //if cpu wins
 	{
-		CpuSideHand.push_back(pair[0]);
-		CpuSideHand.push_back(pair[1]);
+		CpuSideHand.push_back(pair.at(0));
+		CpuSideHand.push_back(pair.at(1));
+		pair.pop_back();
+		pair.pop_back();
+
 
 		if (pile.size() != 0)
 		{
 			for (int i = 0; i < pile.size(); i++)
 			{
 				PlayerSideHand.push_back(pile[i]);
+				pile.pop_back();
 			}
 		}
-		cout << "The pile goes to the superior being.";
+		cout << "The pile goes to the superior being.\n\n";
 	}
 	// If neither card is higher, then they must be equal, time to GoToWar!
 	else
