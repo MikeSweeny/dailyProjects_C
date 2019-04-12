@@ -12,11 +12,11 @@ public:
 	Game();
 	~Game();
 
-	void ShuffleDeck(vector<string> &deck);
-	void Transfer(vector<string> &source, vector<string> &destination, int amount);
-	void Add(vector<string> &source, vector<string> &destination, int amount);
-	void Remove(vector<string> &source, int amount);
-	int Count(vector<string> &vToCount);
+	void ShuffleDeck(vector<string> *deck);
+	void Transfer(vector<string> *source, vector<string> *destination, int amount);
+	void Add(vector<string> *source, vector<string> *destination, int amount);
+	void Remove(vector<string> *source, int amount);
+	int Count(vector<string> *vToCount);
 
 
 	virtual void SetDeck();
@@ -26,7 +26,7 @@ public:
 	virtual void AnnounceWinner(int winner) = 0;
 
 	static const int deckSize = 52;
-	vector<string> deck;
+	vector<string> *deck;
 	int count;
 
 	static const int numbers = 13;

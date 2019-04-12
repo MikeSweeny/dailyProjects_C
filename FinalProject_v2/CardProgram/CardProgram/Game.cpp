@@ -3,12 +3,14 @@
 
 Game::Game()
 {
-
+	deck = new vector<string>;
 
 }
 
 Game::~Game()
 {
+	delete deck;
+	deck = NULL;
 }
 
 void Game::SetDeck()
@@ -27,40 +29,48 @@ void Game::SetDeck()
 		for (int j = 0; j < numbers; j++)
 		{
 			currentCard = Cards[i][j];
-			deck.push_back(currentCard);
+			deck->push_back(currentCard);
 		}
 	}
 }
 
-void Game::ShuffleDeck(vector<string> &deck)
+void Game::ShuffleDeck(vector<string> *deck)
 {
-	random_shuffle(deck.begin(), deck.end());
+	random_shuffle(deck->begin(), deck->end());
 	cout << "Deck has been shuffled!\n";
 }
 
-void Game::Transfer(vector<string> &source, vector<string> &destination, int amount)
+void Game::Transfer(vector<string> *source, vector<string> *destination, int amount)
 {
 	Add(source, destination, amount);
 	Remove(source, amount);
 }
 
-void Game::Add(vector<string> &source, vector<string> &destination, int amount)
+void Game::Add(vector<string> *source, vector<string> *destination, int amount)
 {
-	for (int i = 0; i < amount; i++)
+	int subIter = 0;
+	for (std::vector<string>::reverse_iterator it = source->rbegin(); it != source->rend() ; ++it )
 	{
-		destination.push_back(source[i]);
+		if (subIter < amount)
+		{
+			destination->push_back(*it);
+			subIter++;
+		}
 	}
 }
 
-void Game::Remove(vector<string> &source, int amount)
+void Game::Remove(vector<string> *source, int amount)
 {
 	for (int i = 0; i < amount; i++)
 	{
-		source.pop_back();
+		if (!source->empty()) 
+		{
+			source->pop_back();
+		}
 	}
 }
 
-int Game::Count(vector<string> &vToCount)
+int Game::Count(vector<string> *vToCount)
 {
-	return vToCount.size();
+	return vToCount->size();
 }

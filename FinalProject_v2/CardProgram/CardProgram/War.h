@@ -11,7 +11,7 @@ public:
 
 	War();
 	~War();
-	void Flip(vector<string> Stack);
+	void Flip(vector<string> *stack);
 	void Compare();
 	void GoToWar();
 	void RefillHands();
