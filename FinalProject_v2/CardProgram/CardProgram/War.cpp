@@ -117,13 +117,13 @@ void War::RefillHands()
 void War::Deal()
 {
 	SetDeck();
-	ShuffleDeck(*deck);
-	while (Count(*deck) != 0)
+	ShuffleDeck(deck);
+	while (Count(deck) != 0)
 	{
 		for (int i = 0; i <= deckSize; i++)
 		{
-			Transfer(*deck, PlayerMainHand, 1);
-			Transfer(*deck, CpuMainHand, 1);
+			Transfer(deck, PlayerMainHand, 1);
+			Transfer(deck, CpuMainHand, 1);
 		}
 	}
 }

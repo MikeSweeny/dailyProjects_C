@@ -13,18 +13,28 @@ Game::~Game()
 
 void Game::SetDeck()
 {	
+	string currentCard;
+	int count;
 	const string Cards[suits][numbers] =
 	{
-		{"Apple", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac"},
+		{"2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc", "Ac"},
 		{"2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh", "Ah"},
 		{"2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks", "As"},
 		{"2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd", "Ad"}
 	};
-	for (int i = 0; i < suits; i++)
+	for (vector<string>::size_type i = 0; i < deck->size(); ++i)
+	//for (vector<string>::iterator iter = *deck->begin(); iter != deck->end(); iter++)
 	{
-		for (int j = 0; j < numbers; j++)
+		for (int i = 0; i < suits; i++)
 		{
-			deck->push_back(Cards[i][j]);
+			for (int j = 0; j < numbers; j++)
+			{
+				currentCard = Cards[i][j];
+				//iter->assign(currentCard);
+				//deckSlot = deck.begin() + count;
+				//deckSlot.swap(currentCard);
+				deck[count].swap(currentCard);
+			}
 		}
 	}
 }

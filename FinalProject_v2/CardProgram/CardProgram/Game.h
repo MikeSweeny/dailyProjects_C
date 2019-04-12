@@ -1,6 +1,6 @@
+#include <iostream>
 #include <vector>
 #include <string>
-#include <iostream>
 #include <algorithm>
 #include <array>
 using namespace std;
@@ -18,6 +18,7 @@ public:
 	void Remove(vector<string> source, int amount);
 	int Count(vector<string> &vToCount);
 
+
 	virtual void SetDeck();
 
 	virtual void Deal() = 0;
@@ -25,7 +26,8 @@ public:
 	virtual void AnnounceWinner(int winner) = 0;
 
 	static const int deckSize = 52;
-	vector<string> deck[deckSize];
+	string deck[deckSize];
+	int count;
 
 	static const int numbers = 13;
 	static const int suits = 4;
